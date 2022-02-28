@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="movie"
+            type="com.example.mvvmwithretrofit.model.movie.Result" />
+
+    </data>
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="20dp"
+      android:layout_margin="10dp">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imagePoster"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:image="@{movie.poster_path}"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtTitle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:text="@{movie.title}"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtRating"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:text="@{String.valueOf(movie.vote_average)}"-->
+<!--            android:textColor="#F44336"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:textSize="12dp"-->
+<!--            android:textStyle="bold" />-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+  </androidx.cardview.widget.CardView>
+</layout>
